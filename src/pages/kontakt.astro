@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="JPSnakes - Kontakt" activePage="kontakt">
+    <section class="page-content">
+        <h1 class="page-title">Kontaktujte nás</h1>
+        
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Jak se s námi spojit?</h2>
+                <p>Máte zájem o některé z našich mláďat nebo se chcete pouze poradit ohledně chovu? Neváhejte nás kontaktovat prostřednictvím formuláře, sociálních sítí nebo e-mailu.</p>
+                
+                <div class="info-item">
+                    <strong>E-mail:</strong>
+                    <a href="mailto:info@jpsnakes.cz">info@jpsnakes.cz</a>
+                </div>
+                <div class="info-item">
+                    <strong>Instagram:</strong>
+                    <a href="https://instagram.com/jpsnakes" target="_blank">@jpsnakes</a>
+                </div>
+                <div class="info-item">
+                    <strong>Facebook:</strong>
+                    <a href="#" target="_blank">JPSnakes Chov</a>
+                </div>
+                <div class="info-item">
+                    <strong>Lokalita:</strong>
+                    <span>Česká republika, osobní předání možné na vybraných burzách.</span>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Vaše jméno</label>
+                        <input type="text" id="name" placeholder="Jan Novák" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="vas@email.cz" />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Zpráva</label>
+                        <textarea id="message" rows="5" placeholder="Dobrý den, měl bych zájem o..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Odeslat zprávu</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</Layout>

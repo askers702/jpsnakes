@@ -1,0 +1,46 @@
+---
+interface Props {
+	title: string;
+	activePage: 'index' | 'aktuality' | 'kontakt' | 'burza' | 'configurator';
+}
+
+const { title, activePage } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Zafixovaný levý postranní panel -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="/TRANSPARENT-BG-1-1024x589.png" alt="jpsnakes Logo">
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="/" class={activePage === 'index' ? 'active' : ''}>DOMŮ</a></li>
+                    <li><a href="/aktuality" class={activePage === 'aktuality' ? 'active' : ''}>AKTUALITY</a></li>
+                    <li><a href="/kontakt" class={activePage === 'kontakt' ? 'active' : ''}>KONTAKT</a></li>
+                    <li><a href="/burza" class={activePage === 'burza' ? 'active' : ''}>BURZA</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- Hlavní pravá část -->
+        <main class="content-area">
+            <header class="mobile-header">
+                <img src="/TRANSPARENT-BG-1-1024x589.png" alt="jpsnakes Logo">
+            </header>
+            
+            <slot />
+        </main>
+    </div>
+</body>
+</html>
